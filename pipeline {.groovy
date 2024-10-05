@@ -4,6 +4,9 @@ pipeline {
         maven "MAVEN3"
         jdk "JDK17"
     }
+    environment {
+    JAVA_HOME = tool name: 'JDK17'
+}
 
     stages {
         stage('Fetch Code'){
